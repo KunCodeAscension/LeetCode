@@ -2,6 +2,11 @@ package day18;
 
 import java.util.Arrays;
 
+// 1143. 最长公共子序列
+// https://leetcode.cn/problems/longest-common-subsequence/submissions/617826700/
+// 解题思路来自：灵茶山艾府
+// https://www.bilibili.com/video/BV1TM4y1o7ug?t=1.0
+
 public class id_1143_1 {
     private char[] Text1;
     private char[] Text2;
