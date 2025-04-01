@@ -25,7 +25,7 @@ public class id_72_1 {
         this.s = word1.toCharArray();
         this.t = word2.toCharArray();
         int m = s.length, n = t.length;
-        cache = new int[m][n];
+        cache = new int[m][n];  // 记忆化搜索 引入缓存 否则会超时
         for (int[] row : cache) {
             Arrays.fill(row, -1); // -1 表示还没有计算过
         }
