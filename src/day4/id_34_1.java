@@ -22,7 +22,7 @@ public class id_34_1 {
     }
 
     public int lower_bound2(int[] nums, int target) {
-        int left = -1, right = nums.length - 1;
+        int left = -1, right = nums.length;
         while (left <= right) {
             int mid = (left + right) / 2;
             if(nums[mid] < target) {
