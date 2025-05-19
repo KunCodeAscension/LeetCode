@@ -10,9 +10,6 @@ public class id_78_2 {
 
     public List<List<Integer>> subsets(int[] nums) {
         int n = nums.length;
-        if(n == 0){
-            return ans;
-        }
         this.nums = nums;
         path = new ArrayList<>();
         f(0);
@@ -21,9 +18,12 @@ public class id_78_2 {
 
     public void f(int i) {
         ans.add(new ArrayList<>(path));
-        for(Integer num : nums){
-            path.add(num);
-            f(i + 1);
+        if(i == nums.length){
+            return;
+        }
+        for(int j = i;j < nums.length;j++){
+            path.add(nums[j]);
+            f(j + 1);
             path.remove(path.size() - 1);
         }
     }

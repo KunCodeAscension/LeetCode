@@ -1,10 +1,27 @@
-import day9_work.TreeNode;
-import day9_work.id_129_1;
+import java.util.ArrayList;
+import java.util.List;
 
 public class demo {
+    private static List<List<Integer>> res = new ArrayList<List<Integer>>();
+
+    private static List<Integer> path = new ArrayList<>();
+
+    private static int [][] nums = new int [][]{{1,2,3},{7,8,9}};
+
     public static void main(String[] args) {
-        id_129_1 id129_1 = new id_129_1();
-        int i = id129_1.sumNumbers(new TreeNode(1, new TreeNode(2, null, null), new TreeNode(3, null, null)));
-        System.out.println(i);
+        f(0);
+        System.out.println(res);
+    }
+
+    public static void f(int i){
+        if (path.size() == 2){
+            res.add(new ArrayList<>(path));
+            return;
+        }
+        for(int j = i;j < nums[0].length;j++){
+            path.add(j);
+            f(j + 1);
+            path.remove(path.size() - 1);
+        }
     }
 }
