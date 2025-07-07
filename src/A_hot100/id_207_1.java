@@ -34,6 +34,6 @@ public class id_207_1 {
             }
         }
         color[x] = 2;
-        return false;  // 无环
+        return false;  // 无
     }
 }
