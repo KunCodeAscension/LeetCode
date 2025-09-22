@@ -24,7 +24,7 @@ public class Codec {
     }
 
     public TreeNode deserialize(String data) {
-        if(data == "[]") return null;
+        if(data.equals("[]")) return null;
         String[] vals = data.substring(1, data.length() - 1).split(",");
         TreeNode root = new TreeNode(Integer.parseInt(vals[0]));
         Queue<TreeNode> queue = new LinkedList<>(){{add(root);}};
